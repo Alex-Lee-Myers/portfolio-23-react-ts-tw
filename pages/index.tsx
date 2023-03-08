@@ -6,7 +6,7 @@ import {
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
-import deved from "../public/dev-ed-wave.png";
+import alexmyer from "../public/alexmyers.jpg";
 import code from "../public/code.png";
 import design from "../public/design.png";
 import consulting from "../public/consulting.png";
@@ -22,7 +22,7 @@ export default function Home() {
 	const [darkMode, setDarkMode] = useState(false);
 
 	return (
-		<>
+		<div>
 			<Head>
 				<title>Alex Lee Myers | Portfolio</title>
 				<meta
@@ -33,181 +33,185 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
-				<section className="min-h-screen">
-					<nav className="py-10 mb-12 flex justify-between dark:text-white">
-						<h1 className="font-burtons text-xl">Alex-Lee-Myers</h1>
-						<ul className="flex items-center">
-							<li>
-								<BsFillMoonStarsFill
-									onClick={() => setDarkMode(!darkMode)}
-									className=" cursor-pointer text-2xl"
+			<div className={darkMode ? "dark" : ""}>
+				<main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
+					<section className="min-h-screen">
+						<nav className="py-10 mb-12 flex justify-between dark:text-white">
+							<h1 className="font-burtons text-xl">Alex-Lee-Myers</h1>
+							<ul className="flex items-center">
+								<li>
+									<BsFillMoonStarsFill
+										onClick={() => setDarkMode(!darkMode)}
+										className=" cursor-pointer text-2xl"
+									/>
+								</li>
+								<li>
+									<a
+										className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
+										href="#"
+									>
+										Resume
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div className="text-center p-10 py-10">
+							<h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
+								Alex Lee Myers
+							</h2>
+							<h3 className="text-2xl py-2 dark:text-white md:text-3xl">
+								Web developer.
+							</h3>
+							<p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+								A web developer with a passion for crafting sites, solving
+								problems, and helping others. Open to hire!
+							</p>
+							<div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+								<AiFillTwitterCircle />
+								<AiFillLinkedin />
+								<AiFillYoutube />
+							</div>
+							<div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+								<Image src={alexmyer} alt="" layout="fill" objectFit="cover" />
+							</div>
+						</div>
+					</section>
+					<section>
+						<div>
+							<h3 className="text-3xl py-1 dark:text-white ">
+								Services I offer
+							</h3>
+							<p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+								AAAAAAAAAAAAAAAAAAA write
+							</p>
+							<p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+								BBBBBBBBBBBBBBBBBBBBBB write
+							</p>
+						</div>
+						<div className="lg:flex gap-10">
+							<div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+								<Image src={design} alt="" width={100} height={100} />
+								<h3 className="text-lg font-medium pt-8 pb-2  ">
+									Beautiful Beauty
+								</h3>
+								<p className="py-2">Lorem ipsum</p>
+								<h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+								<p className="text-gray-800 py-1">Photoshop</p>
+								<p className="text-gray-800 py-1">Illustrator</p>
+								<p className="text-gray-800 py-1">Figma</p>
+								<p className="text-gray-800 py-1">Indesign</p>
+							</div>
+							<div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+								<Image src={code} alt="" width={100} height={100} />
+								<h3 className="text-lg font-medium pt-8 pb-2 ">
+									CodECODECODECODEcode
+								</h3>
+								<p className="py-2">
+									Lets get it started write some things here hello helo
+								</p>
+								<h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+								<p className="text-gray-800 py-1">Photoshop</p>
+								<p className="text-gray-800 py-1">Illustrator</p>
+								<p className="text-gray-800 py-1">Figma</p>
+								<p className="text-gray-800 py-1">Indesign</p>
+							</div>
+							<div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+								<Image src={consulting} alt="" width={100} height={100} />
+								<h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
+								<p className="py-2">
+									AInterests funs interesets funsiteianoia hello
+									waijiaijcioifjflex wokr
+								</p>
+								<h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+								<p className="text-gray-800 py-1">Photoshop</p>
+								<p className="text-gray-800 py-1">Illustrator</p>
+								<p className="text-gray-800 py-1">Figma</p>
+								<p className="text-gray-800 py-1">Indesign</p>
+							</div>
+						</div>
+					</section>
+					<section className="py-10">
+						<div>
+							<h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
+							<p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+								Spanish Main pirate ho case shot landlubber or just lubber jack
+								hempen halter spanker jib bounty. Rutters gun lee Davy Jones{" "}
+								<span className="text-teal-500"> wench </span>
+								Locker Shiver me timbers bring a spring upon her cable heave to{" "}
+								<span className="text-teal-500">Buccaneer </span>
+								dead men tell no tales. Boom parrel ho scourge of the seven seas
+								smartly case shot hands keelhaul draught jib.
+							</p>
+							<p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+								I offer from a wide range of services, including brand design,
+								programming and teaching.
+							</p>
+						</div>
+						<div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+							<div className="basis-1/3 flex-1 ">
+								<Image
+									className="rounded-lg object-cover"
+									width={"100%"}
+									height={"100%"}
+									layout="responsive"
+									src={web1}
+									alt=""
 								/>
-							</li>
-							<li>
-								<a
-									className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-									href="#"
-								>
-									Resume
-								</a>
-							</li>
-						</ul>
-					</nav>
-					<div className="text-center p-10 py-10">
-						<h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
-							Alex Lee Myers
-						</h2>
-						<h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-							Web developer.
-						</h3>
-						<p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-							A web developer with a passion for crafting sites, solving
-							problems, and helping others. Open to hire!
-						</p>
-						<div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-							<AiFillTwitterCircle />
-							<AiFillLinkedin />
-							<AiFillYoutube />
+							</div>
+							<div className="basis-1/3 flex-1">
+								<Image
+									className="rounded-lg object-cover"
+									width={"100%"}
+									height={"100%"}
+									layout="responsive"
+									src={web2}
+									alt=""
+								/>
+							</div>
+							<div className="basis-1/3 flex-1">
+								<Image
+									className="rounded-lg object-cover"
+									width={"100%"}
+									height={"100%"}
+									layout="responsive"
+									src={web3}
+									alt=""
+								/>
+							</div>
+							<div className="basis-1/3 flex-1">
+								<Image
+									className="rounded-lg object-cover"
+									width={"100%"}
+									height={"100%"}
+									layout="responsive"
+									src={web4}
+									alt=""
+								/>
+							</div>
+							<div className="basis-1/3 flex-1">
+								<Image
+									className="rounded-lg object-cover"
+									width={"100%"}
+									height={"100%"}
+									layout="responsive"
+									src={web5}
+									alt=""
+								/>
+							</div>
+							<div className="basis-1/3 flex-1">
+								<Image
+									className="rounded-lg object-cover"
+									width={"100%"}
+									height={"100%"}
+									layout="responsive"
+									src={web6}
+									alt=""
+								/>
+							</div>
 						</div>
-						<div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-							<Image src={deved} alt="" layout="fill" objectFit="cover" />
-						</div>
-					</div>
-				</section>
-				<section>
-					<div>
-						<h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
-						<p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-							AAAAAAAAAAAAAAAAAAA write
-						</p>
-						<p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-							BBBBBBBBBBBBBBBBBBBBBB write
-						</p>
-					</div>
-					<div className="lg:flex gap-10">
-						<div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-							<Image src={design} alt="" width={100} height={100} />
-							<h3 className="text-lg font-medium pt-8 pb-2  ">
-								Beautiful Beauty
-							</h3>
-							<p className="py-2">Lorem ipsum</p>
-							<h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-							<p className="text-gray-800 py-1">Photoshop</p>
-							<p className="text-gray-800 py-1">Illustrator</p>
-							<p className="text-gray-800 py-1">Figma</p>
-							<p className="text-gray-800 py-1">Indesign</p>
-						</div>
-						<div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-							<Image src={code} alt="" width={100} height={100} />
-							<h3 className="text-lg font-medium pt-8 pb-2 ">
-								CodECODECODECODEcode
-							</h3>
-							<p className="py-2">
-								Let's get it started write some things here hello helo
-							</p>
-							<h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-							<p className="text-gray-800 py-1">Photoshop</p>
-							<p className="text-gray-800 py-1">Illustrator</p>
-							<p className="text-gray-800 py-1">Figma</p>
-							<p className="text-gray-800 py-1">Indesign</p>
-						</div>
-						<div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-							<Image src={consulting} alt="" width={100} height={100} />
-							<h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
-							<p className="py-2">
-								AInterests funs interesets funsiteianoia hello
-								waijiaijcioifjflex wokr
-							</p>
-							<h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-							<p className="text-gray-800 py-1">Photoshop</p>
-							<p className="text-gray-800 py-1">Illustrator</p>
-							<p className="text-gray-800 py-1">Figma</p>
-							<p className="text-gray-800 py-1">Indesign</p>
-						</div>
-					</div>
-				</section>
-				<section className="py-10">
-					<div>
-						<h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
-						<p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-							Spanish Main pirate ho case shot landlubber or just lubber jack
-							hempen halter spanker jib bounty. Rutters gun lee Davy Jones'{" "}
-							<span className="text-teal-500"> wench </span>
-							Locker Shiver me timbers bring a spring upon her cable heave to{" "}
-							<span className="text-teal-500">Buccaneer </span>
-							dead men tell no tales. Boom parrel ho scourge of the seven seas
-							smartly case shot hands keelhaul draught jib.
-						</p>
-						<p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-							I offer from a wide range of services, including brand design,
-							programming and teaching.
-						</p>
-					</div>
-					<div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-						<div className="basis-1/3 flex-1 ">
-							<Image
-								className="rounded-lg object-cover"
-								width={"100%"}
-								height={"100%"}
-								layout="responsive"
-								src={web1}
-								alt=""
-							/>
-						</div>
-						<div className="basis-1/3 flex-1">
-							<Image
-								className="rounded-lg object-cover"
-								width={"100%"}
-								height={"100%"}
-								layout="responsive"
-								src={web2}
-								alt=""
-							/>
-						</div>
-						<div className="basis-1/3 flex-1">
-							<Image
-								className="rounded-lg object-cover"
-								width={"100%"}
-								height={"100%"}
-								layout="responsive"
-								src={web3}
-								alt=""
-							/>
-						</div>
-						<div className="basis-1/3 flex-1">
-							<Image
-								className="rounded-lg object-cover"
-								width={"100%"}
-								height={"100%"}
-								layout="responsive"
-								src={web4}
-								alt=""
-							/>
-						</div>
-						<div className="basis-1/3 flex-1">
-							<Image
-								className="rounded-lg object-cover"
-								width={"100%"}
-								height={"100%"}
-								layout="responsive"
-								src={web5}
-								alt=""
-							/>
-						</div>
-						<div className="basis-1/3 flex-1">
-							<Image
-								className="rounded-lg object-cover"
-								width={"100%"}
-								height={"100%"}
-								layout="responsive"
-								src={web6}
-								alt=""
-							/>
-						</div>
-					</div>
-				</section>
-			</main>
-		</>
+					</section>
+				</main>
+			</div>
+		</div>
 	);
 }
